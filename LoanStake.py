@@ -1,5 +1,11 @@
 from math import log
 
+"""
+Логика расчета процентной ставки, вынесена в отдельный класс.
+Параметры и константы вынесены в отдельный блок, для удобства,
+если систему нужно было бы поддерживать и модифицировать.
+"""
+
 class LoanStake:
 
     BASE_STAKE = 10.0
@@ -32,6 +38,11 @@ class LoanStake:
         self.requested_loan_amount = requested_loan_amount
         self.income_source = income_source
         self.approved_loan_stake = approved_loan_stake
+
+    """
+    Вычисление ставки с учетом параметров. Нужные параметры подтякиваются
+    через словари, ключ к которым получили из клиентской анкеты
+    """
 
     def calculate_stake(self):
         loan_purpose_mod = self.MOD_LOAN_PURPOSE[self.loan_purpose]
