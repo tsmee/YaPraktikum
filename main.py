@@ -26,7 +26,7 @@ x = {
     "income_source": "PASSIVE_INCOME",                  # "BUSINESS_OWNER", "EMPLOYEE", "PASSIVE_INCOME", "UNEMPLOYED"]
     "loan_amount": 5.5,                                 # Запрошенная сумма [0.1 .. 10], млн
     "annual_income": 1,                                 # Доход за последний год [int], млн
-    "loan_purpse": "CONSUMER",                         # Цель займа ["MORTGAGE", "BUSINESS", "CONSUMER"]
+    "loan_purpose": "CONSUMER",                         # Цель займа ["MORTGAGE", "BUSINESS", "CONSUMER"]
     "credit_score": 2                                   # Кредитный рейтинг [-2, -1, 0, 1, 2]
 }
 scoring(x)

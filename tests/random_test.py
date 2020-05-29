@@ -14,10 +14,10 @@ def get_random_test():
     score = random.randint(-2, 2)
     return (gender, age, period, income_source, loan_size, income, purpose, score)
 
-def moar():
+def generate_tests(tests_num):
     reqs = []
-    n=0
-    while n < 50:
+    n = 0
+    while n < tests_num:
         reqs.append(get_random_test())
         n += 1
     return reqs
