@@ -12,12 +12,12 @@ class LoanStake:
 
     MOD_LOAN_PURPOSE = {
         "MORTGAGE": -2.0,
-        "BUSINESS": 0.5,
-        "CONSUMER": 1.5
+        "BUSINESS": -0.5,
+        "CONSUMER": 1.5,
+        "AUTO": 0               # для автокредита модификатора ставки нет
     }
 
     MOD_CREDIT_SCORE = {
-        -2: 0,
         -1: 1.5,
         0: 0.0,
         1: -0.25,
@@ -27,8 +27,7 @@ class LoanStake:
     MOD_INCOME_SOURCE = {
         "PASSIVE_INCOME": 0.5,
         "EMPLOYEE": -0.25,
-        "BUSINESS_OWNER": 0.25,
-        "UNEMPLOYED": 0
+        "BUSINESS_OWNER": 0.25
     }
 
     def __init__(self, loan_purpose: str, credit_score: int, requested_loan_amount: float,

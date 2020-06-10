@@ -1,7 +1,9 @@
 """
 Класс с логикой для расчета доступной к получению суммы.
+Для каждого валидируемого параметра отдельный метод.
+Один общий, который запускает все проверки, и возвращает либо True, если все ок,
+либо список ошибок при валидации.
 """
-import traceback
 import sys
 
 
@@ -18,14 +20,13 @@ class DataValidation:
         try:
             self.is_dictionary()
             self.validate_keys()
-        except Exception:
-            print("noes")
-            # traceback.print_exc()
-            pass
+        except:
+            e = sys.exc_info()[0]
+            self.data_errors.append(e)
         return self.data_errors
 
     def is_dictionary(self):
-        assert isinstance(self.payload, list)
+        assert isinstance(self.payload, dict)
 
     def validate_keys(self):
         assert set(self.payload.keys()) == set(self.__KEYS)

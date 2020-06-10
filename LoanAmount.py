@@ -7,12 +7,10 @@ class LoanAmount:
     LIMIT_INCOME_SOURCE = {
         "PASSIVE_INCOME": 1,
         "EMPLOYEE": 5,
-        "BUSINESS_OWNER": 10,
-        "UNEMPLOYED": 0
+        "BUSINESS_OWNER": 10
     }
 
     LIMIT_CREDIT_SCORE = {
-        -2: 0,
         -1: 1,
         0: 5,
         1: 10,

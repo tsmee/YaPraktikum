@@ -21,12 +21,12 @@ def scoring(request_dict):
 
 x = {
     "gender": "F",                                      # пол "F"/"M"
-    "age": 30,                                          # Возраст [not negative int], лет
-    "loan_years": 5,                                    # Источник дохода [пассивный доход, наёмный работник, собственный бизнес, безработный]
-    "income_source": "PASSIVE_INCOME",                  # "BUSINESS_OWNER", "EMPLOYEE", "PASSIVE_INCOME", "UNEMPLOYED"]
-    "loan_amount": 5.5,                                 # Запрошенная сумма [0.1 .. 10], млн
-    "annual_income": 1,                                 # Доход за последний год [int], млн
-    "loan_purpose": "CONSUMER",                         # Цель займа ["MORTGAGE", "BUSINESS", "CONSUMER"]
-    "credit_score": 2                                   # Кредитный рейтинг [-2, -1, 0, 1, 2]
+    "age": 10,                                          # Возраст [not negative int], лет
+    "loan_years": 19,                                    # Источник дохода [пассивный доход, наёмный работник, собственный бизнес, безработный]
+    "income_source": "BUSINESS_OWNER",                  # "BUSINESS_OWNER", "EMPLOYEE", "PASSIVE_INCOME", "UNEMPLOYED"]
+    "loan_amount": 3,                                   # Запрошенная сумма [0.1 .. 10], млн
+    "annual_income": 2,                                 # Доход за последний год [int], млн
+    "loan_purpose": "CONSUMER",                         # Цель займа ["MORTGAGE", "BUSINESS", "CONSUMER", "AUTO"]
+    "credit_score": -1                                   # Кредитный рейтинг [-2, -1, 0, 1, 2]
 }
 scoring(x)
